@@ -1,0 +1,47 @@
+show databases;
+create database employee;
+use employee;
+create table Employee (
+EmployeeId int primary key,
+EmployeeName varchar(100),
+Salary int,
+Age int,
+DOB date,
+JobRole varchar(50)
+);
+insert into Employee values(1,'kalai',50000,22,'2002-08-22','Admin');
+insert into Employee values(2,'Akil',60000,21,'2003-03-05','Manager');
+insert into Employee values(3,'ezhil',45000,25,'1999-03-11','ECE');
+insert into Employee values(4,'Jayasudhan',25000,22,'2002-12-16','Sales');
+insert into Employee values(5,'Gopi',30000,23,'2021-09-03','CEO');
+insert into Employee values(6,'Kamal',40000,24,'2000-02-16','TeamLead');
+insert into Employee values(7,'Kathir',35000,26,'1998-09-23','Sales');
+select * from Employee;
+select employeeId,employeename from employee;
+insert into employee(employeeId,employeename) values(8,'kalai');
+update employee set jobrole='Admin' where employeeid=3;
+update employee set salary='70000' where employeeid=1;
+select * from employee where employeename='kalai';
+delete from employee where employeeid=8;
+select * from employee where salary>40000 and salary<=70000;
+
+select * from employee order by employeename;
+select * from employee where jobrole='admin' order by salary;
+select * from employee where jobrole='admin' order by salary desc;
+
+
+select * from employee where employeename like 'k%';
+
+select count(*) count from employee;
+select count(*) count From employee where jobrole='admin';
+select avg(salary) Average from employee;
+select sum(salary) from employee;
+select min(salary) from employee;
+select max(salary) from employee;
+
+alter table employee add email varchar(100);
+alter table employee drop email;
+
+describe employee;
+drop table employees;
+
