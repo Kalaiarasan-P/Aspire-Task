@@ -1,3 +1,8 @@
+// Topic:functions
+//date:
+//Reviwed By;
+
+
 function printHello(): void {
   console.log('Hello!');
 }
