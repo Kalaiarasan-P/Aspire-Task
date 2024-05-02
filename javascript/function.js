@@ -1,3 +1,6 @@
+//title :Function
+//Author:Kalaiarasan P
+//Reviewed By:
 // Arrow Function
 
 let array=[1,2,3,4,5];
